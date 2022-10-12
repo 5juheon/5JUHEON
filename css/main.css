@@ -7,6 +7,7 @@ body{
   font-weight: 400px;
   line-height: 1.4;
   font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
 }
 img{display: block;}
 
@@ -14,11 +15,12 @@ img{display: block;}
 
 /* 버튼공통 */
 .btn{
-  width: 150px;padding: 10px;
-  border: 2px solid #333;border-radius: 4px;
-  color: #fff;font-size: 16px;font-weight: 700;
+  width: 150px;padding: 10px; height: 40px; line-height: 20px;
+  border-radius: 4px; background: #333;
+  font-size: 16px;font-weight: 500;color: #FFF;
   text-align: center;cursor: pointer;box-sizing: border-box;
   display: block;transition: all 0.4s;
+  text-decoration: none;
 }
 .btn:hover{background: #333;color: #fff;}
 
@@ -27,7 +29,7 @@ img{display: block;}
 .btn--reverse:hover{background: transparent;color: #333;}
 
 /* 브라운버튼 */
-.btn--brown{color: #000;border-color: #FFF; opacity: 70%;}
+.btn--brown{color: rgb(255, 255, 255);border-color: #FFF; opacity: 70%;}
 .btn--brown:hover{background: #000;}
 
 /* 골드버튼 */
@@ -38,32 +40,14 @@ img{display: block;}
 .btn--white{color: #fff;border-color: #fff;}
 .btn--white:hover{color: #333;background: #fff;}
 
-/* =================spay================= */
-.back-to-position{opacity: 0;transition: all 1s;}
 
-/* 왼->오 */
-.back-to-position.to-right{transform: translateX(-150px);}
-
-/* 오->왼 */
-.back-to-position.to-left{transform: translateX(150px);}
-
-/* .show가 붙으면 서서히 보이게 제자리로 */
-.show .back-to-position{opacity: 1;transform: translateX(0);}
-
-/* 등장순서 */
-.show .back-to-position.delay-0{transition-delay: 0s;}
-.show .back-to-position.delay-1{transition-delay: 0.3s;}
-.show .back-to-position.delay-2{transition-delay: 0.6s;}
-.show .back-to-position.delay-3{transition-delay: 0.9s;}
-
-/* ======================================= */
 
 /* 공통끝--------------------------------------- */
 
 /* HEADER Area */
 header{width: 100%;background: #fff;border-bottom: 3px solid #000;position: fixed;top: 0;z-index: 10;}
 header > div.inner{height: 120px;}
-header .logo{height: 25px;position: absolute;top: 0;bottom: 0; right: 960px; margin: auto;}
+header h1{height: 25px;width: 246px;margin: auto;padding-top: 20px;}
 
 /* sub-menu Area------------------- */
 header div.sub-menu{display: flex;position: absolute;right: 0;top: 10px;font-family: Arial, Helvetica, sans-serif;}
@@ -83,17 +67,18 @@ header .search .material-icons{height: 24px;position: absolute;top: 0;bottom: 0;
 header .search.focused .material-icons{opacity: 0;}
 
 /* main menu Area---------------------------------------- */
-header nav ul.main-menu{display: flex;position: absolute;bottom: 0;right:960px;z-index: 1;}
+header nav ul.main-menu{display: flex;justify-content: center;padding-top: 25px;}
 header nav ul.main-menu li.item div.item__name{padding: 10px 20px 5px 20px;font-family: Arial, Helvetica, sans-serif;font-size: 19px;cursor: pointer;}
 header nav ul.main-menu li.item:hover div.item__name{background: #e5e5e5;color: #000;border-radius: 6px 6px 0 0;text-decoration: underline;}
 
+
 /* 서브메뉴 */
-header nav ul.main-menu li.item div.item__contents{width: 100%;position: fixed;left: 960px;display: none;} /**/
+header nav ul.main-menu li.item div.item__contents{width: 100%;position: absolute;top: 100%;display: none;left: 0;} /**/
 header nav ul.main-menu li.item:hover div.item__contents{display: block;}
 
 /* 서브메뉴 1층 */
 header nav ul.main-menu li.item .contents__menu{background: #fff;}
-header nav ul.main-menu li.item .contents__menu ul.inner{display: flex;padding: 20px 0;}
+header nav ul.main-menu li.item .contents__menu ul.inner{display: flex;padding: 20px 0;justify-content: center;}
 header nav ul.main-menu li.item .contents__menu ul.inner li{width: 220px;}
 header nav ul.main-menu li.item .contents__menu ul.inner li > h4{font-size: 14px;color: #000;font-weight: bold;
 padding: 3px 0 12px 0;}
@@ -105,20 +90,12 @@ header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li:hover{colo
 .bagtges div img{border-radius: 10px;margin-bottom: 10px;box-shadow: 4px 4px 10px rgba(0,0,0,0.3);cursor: pointer;}
 
 /* mian visual Area------------------------------------ */
-.visual{background: url(../images/visual_bg.jpg) no-repeat;}
 .visual .inner{height: 1080px;}
-.visual .title{position: absolute;top: 88px;left: -10px;}
-.visual .title .btn{position: absolute;top: 259px;left: 173px;}
-
-.visual .coffee1 .cup1.image{position: absolute;bottom: 0;right: -47px;}
-.visual .coffee1 .cup1.text{position: absolute;top: 38px;right: 171px;}
-
-.visual .coffee2 .cup2.image{position: absolute;bottom: 0;right: 162px;}
-.visual .coffee2 .cup2.text{position: absolute;top: 321px;right: 416px;}
-
-.visual .coffee3 .spoon{position: absolute;bottom: 0;left: 275px;}
-
-.visual .fade-in{opacity: 0;}
+.visual .title{position: absolute;top: 88px;}
+.visual .title img{position: relative; width: 100%; height: 900px;}
+.visual .title p{position: absolute; bottom: 600px;right: 840px; font-size: 30px; color: #FFF; border-bottom: 3px solid #fff;}
+.visual .title .btn:nth-child(3){position: absolute; bottom: 500px;right: 750px;}
+.visual .title .btn:nth-child(4){position: absolute; bottom: 500px;right: 1000px;}
 
 /* 유투브 영상------------------------------------ */
 .youtube{position: relative;height: 1080px; overflow: hidden;}
@@ -128,16 +105,18 @@ header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li:hover{colo
 .youtube .youtube__area::before{content: "";display: block;width: 100%;height: 0;padding-top: 56.25%;}
 .youtube .youtube__area #player{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
 
-/* 영상 커버 */
-/* .youtube .youtube__corver{background: url(../images/video_cover_pattern.png);position: absolute;top: 0;left: 290px;width: 1920px;height: 100%;} */
 
 /* 블로그영역 */
-/* .blog-section h2{text-align: center;margin-bottom: 30px;}
-.blog-section ul li a img{width: 100%;max-width: 100%;display: block;}
-.blog-section ul li a time{color: #929292;font-size: 0.688em;margin: 10px 0;display: block;}
-.blog-section ul li a p{color: #424242;font-size: 0.813em;margin-bottom: 30px;}
-.blog-section{display: flex;justify-content: space-between;}
-.blog-section ul{width: 70%;} */
+.blog-section{width: 80%;margin:100px auto;display: flex;}
+.blog-section h2{text-align: center;width: 15%;}
+.blog-section ul{display: flex;width: 85%;}
+.blog-section .swiper{width: 80%;overflow: hidden;}
+.blog-section .swiper1 .swiper-slide{width: 30%;margin: 0 10px;}
+
+.blog-section .swiper1 .swiper-slide a img{width: 100%;display: block;}
+.blog-section .swiper1 .swiper-slide a time{ text-decoration: none;color: #000000;font-size: 1em;margin: 10px 0;display: block;}
+.blog-section .swiper1 .swiper-slide a p{color: #424242;font-size: 0.813em;margin-bottom: 30px; text-decoration: none;}
+
 
 /* footer---------------------------------------- */
 footer{background: #272727;color: #ccc;min-width: 1100px;margin: auto;}
